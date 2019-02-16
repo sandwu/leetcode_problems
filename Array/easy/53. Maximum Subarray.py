@@ -19,11 +19,11 @@ class MySolution:
 
 
 class Solution:
-    “”“
+    """
     讨论区找的答案，是在kadane上进行简化的解法，是真的被惊艳到了！直接在一次遍历里，判断每个数的上一个数，如果是正数就相加，不是就跳过，这样从第一个数开始
     后续的往上叠加一定是正数才会一直加。
     效率：Runtime: 68 ms, faster than 94.14% of Python3 online submissions for Maximum Subarray.
-    ”“”
+    """
     def maxSubArray(self, nums):
         """
         :type nums: List[int]

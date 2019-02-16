@@ -33,10 +33,10 @@ class Solution:
             k -= 1
 
 class Solution2:
-    “”“
+    """
     简化版，看的非常的舒服；从最后一个数开始比较，就能避免nums1填充的0的阻碍
     效率：Runtime: 56 ms, faster than 96.65% of Python3 online submissions for Merge Sorted Array.
-    ”“”
+    """
     def merge(self, nums1, m, nums2, n):
         """
         :type nums1: List[int]

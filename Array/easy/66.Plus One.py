@@ -39,10 +39,10 @@ class Solution1:
             return [1,0]
 
 class Solution1:
-    “”“
+    """
     利用转换的思想，先转换为int来计算，再转回table，也算是一种思路
     效率：Runtime: 56 ms, faster than 95.99% of Python3 online submissions for Plus One.
-    ”“”
+    """
     def plusOne(self, digits):
         """
         :type digits: List[int]

@@ -24,8 +24,8 @@ class Solution:
 
 class Solution2:
     """
-    网上的解法，果然2分法还是有序数组解法的优先选择，不过以我这边的runtime来看，效率还没有上一个解法来的快～
-    普遍效率：Runtime: 60 ms, faster than 57.00% of Python3 online submissions for Search Insert Position.
+    讨论区的解法，果然2分法还是有序数组解法的优先选择～
+    Runtime: 20 ms, faster than 100.00% of Python online submissions for Search Insert Position.
     """
     def searchInsert(self, nums, target):
         """

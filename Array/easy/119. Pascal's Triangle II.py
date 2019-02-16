@@ -16,10 +16,10 @@ class Solution(object):
 
 
 class Solution2:
-    “”“
+    """
     利用两次遍历，是通俗能想得到的方法，首先构造需要求的列表，用1填充，然后跟杨辉三角1的解决方案一样，第一次遍历行，第二次遍历列， 直到结束，返回对应的行。
     Runtime: 32 ms, faster than 100.00% of Python3 online submissions for Pascal's Triangle II.
-    ”“”
+    """
     def getRow(self, rowIndex):
         """
         :type rowIndex: int
