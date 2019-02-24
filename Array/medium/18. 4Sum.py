@@ -33,7 +33,7 @@ class Solution(object):
         return ans
 
 
-class Solution(object):
+class Solution2(object):
     """
     这里采用python的高级解法，这些用法看的我眼花缭乱，感觉自己学了一个假python；
     通过defaultdict建立字典，可以在key不存在时不报错，而是默认value为list即空列表；

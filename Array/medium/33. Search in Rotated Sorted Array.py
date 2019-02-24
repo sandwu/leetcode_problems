@@ -48,12 +48,12 @@ class Solution(object):
             return -1
 
 
-class Solution(object):
+class Solution2(object):
     """
     讨论区的解法有两种，一种是利用二进制位运算求解，这次暂不研究，这边选取二分法，也是最容易浮现的解法
-    在判断target>nums[0]时，一开始我的想法是只要判断target>nums[mid]就行了，结果肯定出错，因为有两种情况，
-    举例来说，target为4，一种是：4，5，0，1，2，此时因为中位数小于nums[0]也就是0，所以应该是end = mid-1
-            另一种target为7，排列是：4，5，6，7，1，2，此时中位数大于nums[0]也就是6,所以应该是start=mid+1
+    在判断target>nums[0]时，一开始我的想法是只要判断target>nums[mid]就行了，结果出错，因为有两种情况，
+    举例来说，target为4，一种是：4，5，0，1，2，此时因为中位数也就是0小于nums[0]，所以应该是end = mid-1
+            另一种target为7，排列是：4，5，6，7，1，2，此时中位数也就是6大于nums[0],所以应该是start=mid+1
     Runtime: 20 ms, faster than 100.00% of Python online submissions for Search in Rotated Sorted Array.
     Memory Usage: 10.8 MB, less than 93.14% of Python online submissions for Search in Rotated Sorted Array.
     """

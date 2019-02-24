@@ -20,7 +20,7 @@ class Solution1:
 
 
 
-class Solution:
+class Solution2:
     """
     讨论区的解法,时间复杂度要优于上方,即从0开始,分为i\j从两端开始往里收缩,原理和上方差不多,但速度就是要快一些.
     Runtime: 48 ms, faster than 100.00% of Python3 online submissions for Container With Most Water.
