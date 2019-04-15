@@ -1,7 +1,7 @@
 
 class MySolution(object):
     """
-    思路简单，从第2个开始比，如果和前两个来的一致吗，则删除该数，否则继续
+    思路简单，从第2个开始比，如果和前两个来的一致，则删除该数，否则继续
     Runtime: 36 ms, faster than 86.94% of Python online submissions for Remove Duplicates from Sorted Array II.
     Memory Usage: 10.5 MB, less than 99.09% of Python online submissions for Remove Duplicates from Sorted Array II.
     """

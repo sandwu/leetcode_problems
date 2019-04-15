@@ -33,7 +33,7 @@ class Solution(object):
 
 class Solution2(object):
     """
-    高阶解法
+    高阶解法，用正则来完成
     Runtime: 24 ms, faster than 64.32% of Python online submissions for Count and Say.
     Memory Usage: 12 MB, less than 5.40% of Python online submissions for Count and Say.
     """
@@ -48,8 +48,9 @@ class Solution2(object):
                         for group, digit in re.findall(r'((.)\2*)', s))
         return s
 
-class Solution2(object):
+class Solution3(object):
     """
+    trick解法，用itertools来完成
     Runtime: 28 ms, faster than 32.56% of Python online submissions for Count and Say.
     Memory Usage: 12 MB, less than 5.40% of Python online submissions for Count and Say
     """
