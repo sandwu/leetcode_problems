@@ -7,7 +7,8 @@
 class Solution(object):
     """
     该解法就是简单粗暴，因为需要找到两链表的相同点，就不断地循环遍历两者，当二者相等即可返回。当其中一个为None时会继续
-    循环，直到两个都为None了那就返回任意一个
+    循环，直到两个都为None了那就返回任意一个。要注意的是当一个链表走到结尾时，需要去走另一个链表，这是因为两个链表的长度不等，
+    只有走到另一个链表才能使第二次遍历二者长度相等，从而能找到相等的点
     Runtime: 196 ms, faster than 90.38% of Python online submissions for Intersection of Two Linked Lists.
     Memory Usage: 41.8 MB, less than 56.97% of Python online submissions for Intersection of Two Linked Lists.
     """
