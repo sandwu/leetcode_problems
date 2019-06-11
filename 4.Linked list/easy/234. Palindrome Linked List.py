@@ -24,7 +24,7 @@ class Solution(object):
 
 class Solution2(object):
     """
-    相关的注释下面写的很清楚，先取到中位数slow，然后根据slow将后半段反转，接着意义比较即可
+    相关的注释下面写的很清楚，先取到中位数slow，然后根据slow将后半段反转，接着一一比较即可
     Runtime: 68 ms, faster than 89.71% of Python online submissions for Palindrome Linked List.
     Memory Usage: 30.9 MB, less than 52.98% of Python online submissions for Palindrome Linked List.
     """
