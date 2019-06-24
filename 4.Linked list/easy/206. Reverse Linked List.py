@@ -8,7 +8,7 @@ class ListNode(object):
 
 class Solution(object):
     """
-    单链表反转，是很经典的题了，该题解法是倒插头，curr的next从None、1、2、3、4依次指向，而prev指向curr，当
+    单链表反转，是很经典的题了，该题解法是倒插头，curr的next是prev，而prev指向curr(即反转指向上一个)，当
     prev = 5的时候，curr.next指向4，所以直接返回prev即可完成链表的反转
     Runtime: 24 ms, faster than 84.08% of Python online submissions for Reverse Linked List.
     Memory Usage: 13.6 MB, less than 65.73% of Python online submissions for Reverse Linked List.
