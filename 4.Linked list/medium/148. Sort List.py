@@ -6,7 +6,7 @@ class ListNode(object):
 
 class Solution(object):
     """
-    用归并排序来做链表，也是相当易懂的
+    题意是对链表排序，用归并排序来做链表，也是相当易懂的
     Runtime: 236 ms, faster than 52.04% of Python online submissions for Sort List.
     Memory Usage: 26.3 MB, less than 65.08% of Python online submissions for Sort List.
     """

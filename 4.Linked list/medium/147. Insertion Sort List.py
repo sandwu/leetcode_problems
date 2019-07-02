@@ -6,7 +6,7 @@ class ListNode(object):
 
 class Solution(object):
     """
-
+    题意是插入排序 注释也是写的非常清楚了
     Runtime: 156 ms, faster than 81.60% of Python online submissions for Insertion Sort List.
     Memory Usage: 15.1 MB, less than 78.57% of Python online submissions for Insertion Sort List.
     """

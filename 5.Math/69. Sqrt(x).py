@@ -2,8 +2,8 @@
 class Solution(object):
     """
     题意是求的一个数的平方根，那用二分法是非常快的！
-    Runtime: 36 ms, faster than 25.07% of Python online submissions for Sqrt(x).
-    Memory Usage: 11.7 MB, less than 55.77% of Python online submissions for Sqrt(x).
+    Runtime: 32 ms, faster than 31.49% of Python online submissions for Sqrt(x).
+    Memory Usage: 11.8 MB, less than 30.98% of Python online submissions for Sqrt(x).
     """
     def mySqrt(self, x):
         """
