@@ -1,7 +1,7 @@
 
 class Solution(object):
     """
-    python 自带的求幂效率还是不错的
+    题意是求幂，python 自带的求幂效率还是不错的
     Runtime: 16 ms, faster than 87.02% of Python online submissions for Pow(x, n).
     Memory Usage: 11.8 MB, less than 41.74% of Python online submissions for Pow(x, n).
     """
