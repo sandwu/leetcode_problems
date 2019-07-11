@@ -46,7 +46,7 @@ class Solution(object):
 class Solution2(object):
     """
     用非递归的方法来实现，利用到栈的数据结构
-    先遍历到树底，依次将左子树的所有节点压入栈，最后栈顶存放的就是最小的数，然后依次从栈推出，
+    先遍历到左子树树底，依次将左子树的所有节点压入栈，最后栈顶存放的就是最小的数，然后依次从栈推出，
     当k位于左子树的时候直接返回值即可，如果不在左子树，那就继续将右子树压入栈
     Runtime: 44 ms, faster than 77.44% of Python online submissions for Kth Smallest Element in a BST.
     Memory Usage: 19.6 MB, less than 63.94% of Python online submissions for Kth Smallest Element in a BST.
