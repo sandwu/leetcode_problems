@@ -5,7 +5,7 @@
 class Solution(object):
     """
     直接按题目大意，从横、竖、9宫格三方面来比较
-    比较有意思的是9宫格的取得方式，另外比较的话直接定义字典(或集合)来存储，存在的话则说明有重复值
+    比较有意思的是9宫格的取得方式(每次取一个小九宫格)，另外比较的话直接定义字典(或集合)来存储，存在的话则说明有重复值
     Runtime: 84 ms, faster than 34.44% of Python online submissions for Valid Sudoku.
     Memory Usage: 11.7 MB, less than 5.11% of Python online submissions for Valid Sudoku.
     """
@@ -62,7 +62,7 @@ class Solution2(object):
 
 class Solution3(object):
     """
-    相对上面一种，更好理解
+    相对上面一种简化版，这个版本更好理解
     Runtime: 80 ms, faster than 40.20% of Python online submissions for Valid Sudoku.
     Memory Usage: 11.9 MB, less than 5.11% of Python online submissions for Valid Sudoku.
     """

@@ -14,7 +14,7 @@ class Solution(object):
         """
         # divmod获取整除后的整数和余数
         n, remainder = divmod(abs(numerator), abs(denominator))
-        # sign判断是否有负数
+        # sign判断是否有负数，作为符号展示
         sign = '-' if numerator*denominator < 0 else ''
         result = [sign+str(n), '.']
         stack = []
