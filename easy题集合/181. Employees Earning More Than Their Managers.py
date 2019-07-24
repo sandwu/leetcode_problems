@@ -1,0 +1,10 @@
+
+
+
+"""
+题意要求求员工工资高于老板工资
+select E1.Name
+from Employee as E1, Employee as E2
+where E1.ManagerId = E2.Id and E1.Salary > E2.Salary
+
+"""
