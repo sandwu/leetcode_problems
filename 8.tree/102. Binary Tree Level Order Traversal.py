@@ -15,6 +15,7 @@ class Solution(object):
     在每层的时候，通过一个cur_level记录当前层的node.val，size用来记录queue的在增加子孙node之前大小，因为之后我们会实时更新queue的大小。
     当每次从queue中pop出来的节点，把它的左右子节点放进Queue以后，记得把节点本身的的value放进cur_level
     for loop终止后，就可以把记录好的整层的数值，放入我们的return数组里。
+    
     Runtime: 16 ms, faster than 95.21% of Python online submissions for Binary Tree Level Order Traversal.
     Memory Usage: 12.2 MB, less than 88.00% of Python online submissions for Binary Tree Level Order Traversal.
     """
