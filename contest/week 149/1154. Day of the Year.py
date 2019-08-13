@@ -7,18 +7,7 @@ class Solution:
     题意是求给定格式"2019-01-04"，求对应的当年的天数
     """
     def dayOfYear(self, date: str) -> int:
-        list1 = [0,
-                 31,
-                 28,
-                 31,
-                 30,
-                 31,
-                 30,
-                 31,
-                 31,
-                 30,
-                 31,
-                 30]
+        list1 = [0,31,28,31,30,31,30,31,31,30,31,30]
 
         year ,month ,day = date.split("-")
         if self.isleapyear(int(year)):
