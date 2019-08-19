@@ -8,7 +8,7 @@
 
 class Solution(object):
     """
-    题意是求BST中第k小的树
+    题意是求BST中第k小的树节点
     BST即binary search tree，树节点满足左子树小于该节点小于右子树，所以中序遍历后就可以得到有序列表
     中序遍历即：左子树→根节点→右子树，所以根据中序遍历写得递归代码如下
     Runtime: 52 ms, faster than 42.88% of Python online submissions for Kth Smallest Element in a BST.

@@ -12,8 +12,9 @@ import collections
 
 class Solution(object):
     """
-    题意是用之字形遍历树
+    题意是用之字形遍历树，即先右到左，再从左到右
     用deque可以左边pop出，右边append进去，根据树的特点，先pop出父节点，然后append进去子节点！
+    要注意的是在奇数层反转结果，这样才能形成之字形遍历
     Runtime: 24 ms, faster than 53.71% of Python online submissions for Binary Tree Zigzag Level Order Traversal.
     Memory Usage: 12.2 MB, less than 14.06% of Python online submissions for Binary Tree Zigzag Level Order Traversal.
     """

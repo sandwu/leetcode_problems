@@ -3,10 +3,9 @@ import collections
 import random
 
 
-#https://leetcode.com/problems/online-majority-element-in-subarray/discuss/355848/Python-Binary-Search-%2B-Find-the-Majority-Element
+#参考讨论区：https://leetcode.com/problems/online-majority-element-in-subarray/discuss/355848/Python-Binary-Search-%2B-Find-the-Majority-Element
 
 class MajorityChecker:
-
     def __init__(self, A):
         a2i = collections.defaultdict(list)
         for i, x in enumerate(A):
