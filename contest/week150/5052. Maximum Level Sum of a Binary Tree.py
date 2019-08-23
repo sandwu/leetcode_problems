@@ -9,6 +9,7 @@ class TreeNode:
 class Solution:
     """
     题意是求树的最大层级和，返回对应的层级
+    解法和102题求tree的层级遍历一致，不过需要增加每层的计数、求和比较
     通过BFS将每层的层级和求出，然后指定最大和变量max，最后返回最大和所对应的层级index即可
     """
     def maxLevelSum(self, root: TreeNode) -> int:
