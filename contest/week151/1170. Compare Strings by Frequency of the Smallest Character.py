@@ -1,8 +1,11 @@
+from _bisect import bisect
+from collections import Counter
+
 
 class Solution(object):
     """
-
-
+    题意是比对两个列表集合，其中最小字母的出现次数！然后依次填出第二个集合比第1个集合高的次数的个数
+    解法：针对每个集合求出对应的数字和，然后遍历第1、第2个集合，得出答案
     """
     def numSmallerByFrequency(self, queries, words):
         """
@@ -27,8 +30,6 @@ class Solution(object):
             res.append(index)
         return res
 
-
-
     def get_nums(self, word):
         dict1 = {}
         for i in word:
@@ -38,6 +39,22 @@ class Solution(object):
                 dict1[i] += 1
         min_alp = min(list(dict1.keys()))
         return dict1[min_alp]
+
+class Solution1(object):
+    """
+    上述算法的简化版
+    """
+    def numSmallerByFrequency(self, queries, words):
+        freq, ans = [], []
+        for word in words:
+            c = Counter(word)
+            freq.append(c[min(c.keys())])
+        freq.sort()
+        n = len(freq)
+        for query in queries:
+            c = Counter(query)
+            ans.append(n - bisect(freq, c[min(c.keys())]))
+        return ans
 
 a = Solution()
 q = ["bba","abaaaaaa","aaaaaa","bbabbabaab","aba","aa","baab","bbbbbb","aab","bbabbaabb"]
