@@ -5,7 +5,7 @@
 class Solution:
     """
     题意是给定一个集合nums，求里面的所有数字拼接的最大数字
-    这里利用cmp_func来判断两个数组合哪个更大
+    这里利用cmp_func来判断两个数组合哪个更大，比如3和30，330要大于303
     Runtime: 48 ms, faster than 59.44% of Python3 online submissions for Largest Number.
     Memory Usage: 14 MB, less than 7.14% of Python3 online submissions for Largest Number.
     """
