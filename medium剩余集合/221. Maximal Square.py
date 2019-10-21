@@ -5,7 +5,7 @@
 class Solution(object):
     """
     题意是求matrix矩阵里的小矩形，满足小矩形全部都是1的特征
-    解法是重新构造一个矩形，然后判断一个数，当它附件都是1的时候，就取2，最后取该最大值的平方即可
+    解法是重新构造一个矩形，然后判断一个数，当它附近都是1的时候，就取2，以此类推，最后取该最大值的平方即可
     Runtime: 200 ms, faster than 26.44% of Python online submissions for Maximal Square.
     Memory Usage: 19.7 MB, less than 12.50% of Python online submissions for Maximal Square.
     """
