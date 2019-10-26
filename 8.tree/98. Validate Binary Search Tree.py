@@ -8,8 +8,8 @@
 
 class Solution(object):
     """
-    题意是验证一棵树是否为BST，BST满足左子树小于根小于右子树，所以前序遍历后必然是有序的
-    先前序遍历，然后判断是否是有序的即可
+    题意是验证一棵树是否为BST，BST满足左子树小于根小于右子树，所以中序遍历后必然是有序的
+    先中序遍历，然后判断是否是有序的即可
     Runtime: 32 ms, faster than 83.45% of Python online submissions for Validate Binary Search Tree.
     Memory Usage: 16.7 MB, less than 25.77% of Python online submissions for Validate Binary Search Tree.
     """

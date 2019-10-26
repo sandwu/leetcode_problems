@@ -14,18 +14,13 @@ class Solution:
     Memory Usage: 13.8 MB, less than 6.56% of Python3 online submissions for Binary Tree Inorder Traversal.
     """
     def inorderTraversal(self, root: TreeNode) -> List[int]:
-        if root == None :return []
-        res =[]
-        st = []
-        node = root
-        st.append(root)
-        while st:
-            while node and node.left:
-                node = node.left
-                st.append(node)
-            node = st.pop()
+        res, stack = [], []
+        while True:
+            while root:
+                stack.append(root)
+                root = root.left
+            if not stack:
+                return res
+            node = stack.pop()
             res.append(node.val)
-            node = node.right
-            if node:
-                st.append(node)
-        return res
+            root = node.right
