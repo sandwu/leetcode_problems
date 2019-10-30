@@ -52,6 +52,7 @@ def merge(left,right):
             res.append(right[j])
             j += 1
     res += left[i:]
+
     res += right[j:]
     return res
 
