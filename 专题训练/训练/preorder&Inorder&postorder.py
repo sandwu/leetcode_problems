@@ -1,5 +1,5 @@
 
-
+#leetcode:94\144\145
 # Definition for a binary tree node.
 class TreeNode(object):
     def __init__(self, x):
@@ -24,11 +24,11 @@ class Tree:
         stack.append(root)
         while stack:
             node = stack.pop()
-            if not node:
-                continue
             res.append(node.val)
-            stack.append(node.right)
-            stack.append(node.left)
+            if node.right:
+                stack.append(node.right)
+            if node.left:
+                stack.append(node.left)
         return res
 
 
@@ -62,17 +62,23 @@ class Tree:
 
     def helper2(self, root, res):
         if root:
+            self.helper(root.left, res)
             self.helper(root.right, res)
             res.append(root.val)
-            self.helper(root.left, res)
 
-    def postorder2(self):
-        pass
+    def postorder2(self,root):
+        if not root:return
+        res,stack = [],[]
+        stack.append(root)
+        while stack:
+            node = stack.pop()
+            res.append(node.val)
+            if node.left:
+                stack.append(node.left)
+            if node.right:
+                stack.append(node.right)
+        return res[::-1]
 
-
-
-    def postorder(self):
-        pass
 
 
 
