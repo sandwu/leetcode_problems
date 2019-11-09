@@ -81,23 +81,3 @@ class Tree:
 
 
 
-
-
-# def th_test(country):
-#     app_queryset = Application.objects.filter(appid__contains=country)
-#     res = []
-#     for obj in app_queryset:
-#         res.append({"id":obj.id,"appid":obj.appid})
-#     for obj2 in res:
-#         application_id = obj2["id"]
-#         cluster_name = obj2["appid"] + '_test_normal'
-#         env_level = 10
-#         slb_id = 4
-#         cluster_role = 10
-#         priority = 1
-#         c_obj = Cluster.objects.get()
-#
-#         Cluster.objects.create(application_id=application_id,cluster_name=cluster_name,env_level=env_level,slb_id=slb_id,cluster_role=cluster_role,priority=priority)
-#         cluster_obj = Cluster.objects.get(cluster_name=cluster_name)
-#         cluster_id = cluster_obj.id
-#         ClusterHost.objects.create(cluster_id=cluster_id,host_id=449)
