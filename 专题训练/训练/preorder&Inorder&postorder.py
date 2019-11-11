@@ -10,12 +10,16 @@ class TreeNode(object):
 
 class Tree:
     def preorder_stack(self,root):
-        if not root:return
-        res  = []
-        res.append(root.val)
-        res.append(self.preorder_stack(root.left))
-        res.append(self.preorder_stack(root.right))
+        res = []
+        self.helper(root, res)
         return res
+
+    def helper(self, root, res):
+        if root:
+            res.append(root.val)
+            self.helper(root.left, res)
+            self.helper(root.right, res)
+
 
     def preorder_queue(self,root):
         if not root:return
@@ -58,7 +62,7 @@ class Tree:
     def postorder(self,root):
         res = []
         self.helper2(root, res)
-        return res
+        return res[::-1]
 
     def helper2(self, root, res):
         if root:
