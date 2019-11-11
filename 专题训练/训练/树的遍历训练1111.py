@@ -21,12 +21,26 @@ class TreeTravel:
             self.pre_helper(root.left,res)
             self.pre_helper(root.right,res)
 
+    def inorder(self,root):
+        res = []
+        self.in_helper(root,res)
+        return res
 
+    def in_helper(self,root,res):
+        if root:
+            self.in_helper(root.left,res)
+            res.append(root.val)
+            self.in_helper(root.right, res)
 
-    def inorder(self):
-        pass
+    def postorder(self,root):
+        res = []
+        self.post_helper(root, res)
+        return res
 
-    def postorder(self):
-        pass
+    def post_helper(self,root,res):
+        if root:
+            self.post_helper(root.left,res)
+            self.post_helper(root.right,res)
+            res.append(root.val)
 
 
