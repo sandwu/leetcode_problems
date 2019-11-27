@@ -18,7 +18,17 @@ class Solution(object):
         return prev
 
     def hascycle(self,head):
-        pass
+        slow = fast = head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            if slow == fast:
+                return True
+        return False
 
     def middlenode(self,head):
-        pass
+        slow = fast = head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        return slow
