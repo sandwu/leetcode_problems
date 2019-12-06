@@ -29,7 +29,7 @@ class Solution(object):
             return head
 
         tail = head
-        for i in range( n - k % n -1):
+        for _ in range( n - k % n -1):
             tail = tail.next
 
         next, tail.next, pre.next = tail.next, None, head
