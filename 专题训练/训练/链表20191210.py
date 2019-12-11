@@ -28,6 +28,7 @@ class Solution:
     def removeDuplicateNode(self,head):
         dummy = curr = ListNode(0)
         while head:
+
             pass
 
     def twoListSum(self,l1,l2):
