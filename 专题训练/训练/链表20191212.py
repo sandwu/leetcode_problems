@@ -25,12 +25,41 @@ class Solution:
 
         return current
 
-
     def removeDuplicateNode(self, head):
-        pass
+        curr = dummy = ListNode(0)
+        dummy.next = head
+        while head and head.next:
+            if head.val == head.next.val:
+                while head and head.next and head.val == head.next.val:
+                    head.next = head.next.next
+                head = head.next
+                dummy.next = head
+            else:
+                head = head.next
+                dummy = dummy.next
+        return curr.next
 
     def twoListSum(self, l1, l2):
-        pass
+        curr = ListNode(0)
+        carry = 0
+        while l1 or l2 or carry:
+            v1 = v2 = 0
+            if l1:
+                v1 += l1.val
+                l1 = l1.next
+            if l2:
+                v2 += l2.val
+                l2 = l2.val
+            carry, val = divmod(v1+v2+carry,10)
+            curr.next = ListNode(val)
+        return curr.next
 
     def swapTwoNumList(self,head):
-        pass
+        curr = dummy = ListNode(0)
+        dummy.next = head
+        while dummy.next and dummy.next.next:
+            a = dummy.next
+            b = dummy.next.next
+            dummy.next, b.next, a.next = b,a,a.next
+            dummy = a
+        return dummy.next
