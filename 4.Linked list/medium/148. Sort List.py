@@ -19,6 +19,7 @@ class Solution(object):
                 tail.next, tail, h2 = h2, h2, h2.next
 
         tail.next = h1 or h2
+
         return dummy.next
 
     def sortList(self, head):
