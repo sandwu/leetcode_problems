@@ -23,7 +23,7 @@ class Solution(object):
                 break
         else:
             return None
-        while head != slow:
+        while head != slow:  #当相遇的时候，慢指针巨鹿环节点的距离和head距离环节点的距离一致！
             slow = slow.next
             head = head.next
         return head

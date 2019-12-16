@@ -66,3 +66,19 @@ class Solution2(object):
         slow.next = None
         root.left = self.sortedListToBST(head)
         return root
+
+    def sortListToBST2(self,head):
+        if not head:
+            return None
+        if not head.next:
+            return TreeNode(head.val)
+        pre, slow, fast = None, head, head
+        while fast and fast.next:
+            pre = slow
+            slow = slow.next
+            fast = fast.next.next
+        root = TreeNode(slow.val)
+        root.right = self.sortedListToBST(slow.next)
+        pre.next = None
+        root.left = self.sortedListToBST(head)
+        return root
