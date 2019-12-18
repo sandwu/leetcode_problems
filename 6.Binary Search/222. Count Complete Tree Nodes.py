@@ -15,7 +15,7 @@ class Solution(object):
     Runtime: 64 ms, faster than 98.26% of Python online submissions for Count Complete Tree Nodes.
     Memory Usage: 27.7 MB, less than 57.43% of Python online submissions for Count Complete Tree Nodes.
     """
-    def countNodes(self, root):
+    def countNodes2(self, root):
         """
         :type root: TreeNode
         :rtype: int
@@ -30,6 +30,12 @@ class Solution(object):
                 count += 2 ** r
                 root = root.left
         return count
+
+    def countNodes(self,root):
+        if not root:return 0
+        l,r = map(self.getHeight, (root.left,root.right))
+        if l == r:return 2 ** l + self.countNodes(root.right)
+        else:return 2 ** r + self.countNodes(root.left)
 
     def getHeight(self, root):
         height = 0
