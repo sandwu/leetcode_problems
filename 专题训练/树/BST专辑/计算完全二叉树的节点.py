@@ -23,7 +23,7 @@ class Solution(object):
         return height
 
 
-
+#关于遍历联系
 class Solution2:
     def preorder(self,root):
         res = []
