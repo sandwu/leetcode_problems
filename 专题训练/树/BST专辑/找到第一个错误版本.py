@@ -15,6 +15,7 @@ class Solution:
             if isBadVersion(mid):
                 if isBadVersion(mid-1):
                     end = mid-1
+
                 else:
                     return mid
             else:
