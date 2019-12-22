@@ -20,5 +20,6 @@ class Solution:
             else:
                 if isBadVersion(mid+1):
                     return mid+1
+
                 else:
                     start = mid+1
