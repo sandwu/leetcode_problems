@@ -25,5 +25,6 @@ class Solution(object):
             for j in range(0 ,i):
                 if nums[i] > nums[j]:
                     tmax = max(tmax ,dp[j] +1)
+
             dp[i] = tmax
         return max(dp)
