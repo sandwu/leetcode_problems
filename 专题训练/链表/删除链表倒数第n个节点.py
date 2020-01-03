@@ -24,7 +24,7 @@ class Solution(object):
         #遍历n，是的fast位于正数第n个节点
         for _ in range(n):
             fast = fast.next
-        #当fast为None，索命要删除的节点是第一个节点，所以此时直接返回head.next，即跳过了第一个节点
+        #当fast为None，说明要删除的节点是第一个节点，所以此时直接返回head.next，即跳过了第一个节点
         if not fast:
             return head.next
         #然后同时跑快慢指针，当快指针的next为None时，即说明到达了最后一个节点，此时将slow的写一个节点跳过即可

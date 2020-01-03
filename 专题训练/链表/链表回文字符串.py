@@ -54,3 +54,27 @@ class Solution2(object):
             node = node.next
             head = head.next
         return True
+
+    def isPalindrome2(self, head):
+        """
+        :type head: ListNode
+        :rtype: bool
+        """
+        slow = fast = head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        # 如果是3个则位于第2个，如果是4个则位于第3个
+        prev = None
+        curr = slow
+        while slow:
+            curr = slow
+            slow = slow.next
+            curr.next = prev
+            prev = curr
+        while curr:
+            if curr.val != head.val:
+                return False
+            curr = curr.next
+            head = head.next
+        return True

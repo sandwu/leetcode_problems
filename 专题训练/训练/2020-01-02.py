@@ -63,3 +63,38 @@ class Solution:
             dummy = dummy.next
         dummy.next = l1 or l2
         return curr.next
+
+    def deletenth(self,head,k):
+        slow = fast = head
+        for _ in range(k):
+            fast = fast.next
+
+        if not fast:
+            return head.next
+
+        while fast.next:
+            fast = fast.next
+            slow = slow.next
+        slow.next = slow.next.next
+        return head
+
+    def palindLink(self,head):
+        slow = fast = head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        #如果是3个则位于第2个，如果是4个则位于第3个
+        prev = None
+        while slow:
+            curr = slow
+            slow = slow.next
+            curr.next = prev
+            prev = curr
+        while curr:
+            if curr.val != head.val:
+                return False
+            curr = curr.next
+            head = head.next
+        return True
+
+
