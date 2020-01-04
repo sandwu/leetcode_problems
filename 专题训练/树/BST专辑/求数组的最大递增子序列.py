@@ -3,6 +3,15 @@
 
 #300
 
+"""
+
+Input: [10,9,2,5,3,7,101,18]
+Output: 4
+Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.
+
+[1,4,3,2,6,5]
+"""
+
 class Solution(object):
     """
     题意是求数组的最大递增子序列，参考博文：https://blog.csdn.net/fuxuemingzhu/article/details/79820919
