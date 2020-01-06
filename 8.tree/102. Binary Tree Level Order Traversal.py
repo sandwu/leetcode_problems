@@ -6,6 +6,22 @@
 #         self.left = None
 #         self.right = None
 
+
+"""
+Given binary tree [3,9,20,null,null,15,7],
+    3
+   / \
+  9  20
+    /  \
+   15   7
+return its level order traversal as:
+[
+  [3],
+  [9,20],
+  [15,7]
+]
+"""
+
 class Solution(object):
     """
     题意求一棵树的层级遍历，通过BFS来完成
