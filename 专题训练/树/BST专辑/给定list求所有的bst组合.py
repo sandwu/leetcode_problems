@@ -45,7 +45,6 @@ class Solution(object):
             return []
         return self.dfs(1, n+ 1)
 
-
     def dfs(self, start, end):
         if start == end:
             return None
