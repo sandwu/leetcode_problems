@@ -26,6 +26,14 @@ class Solution:
                 if nums[j] < nums[i]: dp[i] = max(dp[i], dp[j] + 1)
         return max(dp)
 
+    def bstfromn(self,n):
+        bp = [0] * (n+1)
+        bp[0] = 1
+        for i in range(1,n+1):
+            for j in range(i):
+                bp[i] += bp[j] * bp[i-j-1]
+        return bp.pop()
+
 
 nums = [10,9,2,5,3,7,101,18]
 s = Solution()

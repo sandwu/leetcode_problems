@@ -5,6 +5,27 @@
 #         self.left = None
 #         self.right = None
 
+"""
+Example:
+
+Given the below binary tree and sum = 22,
+
+      5
+     / \
+    4   8
+   /   / \
+  11  13  4
+ /  \    / \
+7    2  5   1
+Return:
+
+[
+   [5,4,11,2],
+   [5,8,4,5]
+]
+
+"""
+
 class Solution(object):
     """
     题意是求树从根节点到叶节点之间的路径和等于所给的sum值的所有集合
