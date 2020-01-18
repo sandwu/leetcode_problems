@@ -22,3 +22,16 @@ class Solution:
         res.append(root)
         self.preorder(root.left, res)
         self.preorder(root.right, res)
+
+class Solution2:
+    def flatten(self,root):
+        if not root:return
+        left = root.left
+        right = root.right
+        root.left = None
+        self.flatten(left)
+        self.flatten(right)
+        root.right = left
+        while root.right:
+            root = root.right
+        root.right = right
