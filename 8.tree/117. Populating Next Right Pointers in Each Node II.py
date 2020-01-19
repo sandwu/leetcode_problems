@@ -10,6 +10,9 @@ class Node:
         self.right = right
         self.next = next
 """
+import collections
+
+
 class Solution:
     """
     就是把每层的节点放到一个队列里，把队列的每个元素进行弹出的时候，
