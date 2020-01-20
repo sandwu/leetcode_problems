@@ -25,6 +25,7 @@ class Solution2:
         self.dfs(root,0)
         return self.res
 
+
     def dfs(self,root,value):
         if root:
             self.dfs(root.left,value * 10+root.val)
