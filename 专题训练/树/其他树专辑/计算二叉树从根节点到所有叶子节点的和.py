@@ -13,7 +13,6 @@ class Solution:
             if not node.left and not node.right:
                 res += val
             if node.right:
-
                 queue.append((node.right,val * 10 + node.right.val))
             if node.left:
                 queue.append((node.left,val * 10 + node.left.val))
