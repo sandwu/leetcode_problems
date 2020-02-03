@@ -22,6 +22,7 @@ class Solution:
 class Solution2:
     def sumNumbers(self,root):
         self.res = 0
+
         self.dfs(root,0)
         return self.res
 
