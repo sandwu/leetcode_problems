@@ -18,7 +18,7 @@ class MySolution:
             if row > 1:
                 for col in range(row-1):
                     inside.append(res[row-1][col]+res[row-1][col+1])
-            if row > 0:
+            if row != 0:
                 inside.append(1)
             
             res.append(inside)
