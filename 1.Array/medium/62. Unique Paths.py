@@ -19,7 +19,7 @@ class Solution(object):
         return res[-1][-1]
 
 
-class Solution(object):
+class Solution2(object):
     """
     上面的优化！
     Runtime: 16 ms, faster than 100.00% of Python online submissions for Unique Paths.
