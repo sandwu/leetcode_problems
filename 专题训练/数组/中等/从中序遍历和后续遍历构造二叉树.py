@@ -1,5 +1,5 @@
 
-# Definition for a binary tree node.
+
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
@@ -27,27 +27,3 @@ class Solution(object):
         root.left = self.buildTree(inorder[:index], postorder[:index])
         root.right = self.buildTree(inorder[index + 1:], postorder[index:len(postorder) - 1])
         return root
-
-class Solution2(object):
-    """
-    跟105同样的解法
-    Runtime: 116 ms, faster than 61.08% of Python online submissions for Construct Binary Tree from Inorder and Postorder Traversal.
-    Memory Usage: 50 MB, less than 49.18% of Python online submissions for Construct Binary Tree from Inorder and Postorder Traversal.
-    """
-    def buildTree(self, inorder, postorder):
-        """
-        :type inorder: List[int]
-        :type postorder: List[int]
-        :rtype: TreeNode
-        """
-        if not inorder or not postorder:
-            return None
-        
-        root = TreeNode(postorder.pop())
-        inorderIndex = inorder.index(root.val)
-
-        root.right = self.buildTree(inorder[inorderIndex+1:], postorder)
-        root.left = self.buildTree(inorder[:inorderIndex], postorder)
-
-        return root
-        
