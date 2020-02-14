@@ -21,4 +21,7 @@ class Solution(object):
             re[i] = re[i] * temp
         return re
 
-        
+
+nums = [1,2,3,4]
+a = Solution()
+a.productExceptSelf(nums)

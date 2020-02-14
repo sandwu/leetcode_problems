@@ -38,4 +38,7 @@ class Solution2(object):
             r[1:] = n,
         return ['->'.join(map(str, r)) for r in ranges]
             
-            
+
+nums = [0,1,2,4,5,7]
+a = Solution()
+a.summaryRanges(nums)
