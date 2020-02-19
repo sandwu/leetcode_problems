@@ -7,6 +7,7 @@ class Solution(object):
         """
         res = []
         nums.sort()
+
         for i in range(len(nums)):
             if i> 0 and nums[i] == nums[i - 1]: #要注意当当前数等于上一个数的时候，可能会重复，要跳过
                 continue
