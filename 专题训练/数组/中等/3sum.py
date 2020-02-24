@@ -1,4 +1,35 @@
 
+"""
+
+Given array nums = [-1, 0, 1, 2, -1, -4],
+
+A solution set is:
+[
+  [-1, 0, 1],
+  [-1, -1, 2]
+]
+
+
+"""
+
+class Solut:#超时了
+    def ss(self,nums):
+        self.res = []
+        self.dfs(nums,0,[])
+        return self.res
+
+    def dfs(self,nums,index,result):
+        if len(result) > 3:return
+        if len(result) == 3 and sum(result) == 0:
+            self.res.append(result)
+        for i in range(index,len(nums)):
+            self.dfs(nums,i+1,result+[nums[i]])
+
+
+
+
+
+
 class Solution(object):
     def threeSum(self, nums):
         """

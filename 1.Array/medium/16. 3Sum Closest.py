@@ -1,4 +1,11 @@
 
+"""
+Given array nums = [-1, 2, 1, -4], and target = 1.
+
+The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
+
+"""
+
 class Solution(object):
     """
     和15题的思路差不多，利用先求得三者的和，然后进行与target最小值的判断，保持当前最小值sum1，然后逐步推进数组，直到l>=r，所以是个O(n^2)
