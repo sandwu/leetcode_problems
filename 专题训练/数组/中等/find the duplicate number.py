@@ -26,4 +26,4 @@ class Solution:
 
 nums = [1,3,4,2,2,5]
 a = Solution()
-a.findthedup(nums)
+print(a.findthedup(nums))
