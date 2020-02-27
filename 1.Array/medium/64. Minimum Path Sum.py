@@ -1,4 +1,17 @@
 
+
+"""
+Input:
+[
+  [1,3,1],
+  [1,5,1],
+  [4,2,1]
+]
+Output: 7
+Explanation: Because the path 1→3→1→1→1 minimizes the sum.
+
+"""
+
 class Solution(object):
     """
     题目容易和62、63弄混了，该题的意思是在给定的双重数组里，找出从gird[0][0]到grid[-1][-1]的最短距离

@@ -13,7 +13,7 @@ class Solution:
         res = []
         tmp = 1
         res.append(1)
-        for i in range(len(nums)-1):
+        for i in range(len(nums)-1):  #[1,1,2,6]
             tmp *= nums[i]
             res.append(tmp)
         tmp = 1
