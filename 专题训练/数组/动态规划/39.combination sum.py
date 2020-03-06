@@ -28,7 +28,6 @@ class Solution(object):
 
 
 class Solution2:
-
     def combinationSum(self, candidates: [int], target: int) -> [[int]]:
         answer = []
 
