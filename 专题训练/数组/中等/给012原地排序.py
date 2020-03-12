@@ -41,3 +41,20 @@ class Solution2(object):
         nums[:c0] = [0] * c0
         nums[c0:c1+c1] = [1] * c1
         nums[c0+c1:] = [2] * c2
+
+
+class Person(object):
+    def __init__(self, name, age=18):
+        self.name = name
+        self.age = age
+
+    @property
+    def age(self):
+        return self.age
+
+
+xm = Person('xiaoming')  # 定义一个人名小明
+print(xm.age)  # 结果为18
+xm.age = -4  # 报错无法给年龄赋值
+print(xm.age)
+
