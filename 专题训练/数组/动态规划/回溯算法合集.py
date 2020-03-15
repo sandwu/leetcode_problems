@@ -45,11 +45,12 @@ class Solution2:
 
     def dfs(self,index,candidates,target,path):
         if target == 0:
-            if path not in self.res:
-                self.res.append(path)
-                return
+            self.res.append(path)
+            return
         if target < 0:return
         for i in range(index,len(candidates)):
+            if i > index and candidates[i] == candidates[i - 1]:
+                continue
             self.dfs(i+1,candidates,target-candidates[i],path+[candidates[i]])
 
 
@@ -173,3 +174,169 @@ class Solution6:
         or self.dfs(word[1:],board,i,j+1) or self.dfs(word[1:],board,i,j-1)
         board[i][j] = tmp
         return res
+
+
+
+
+"""
+A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
+
+The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked 'Finish' in the diagram below).
+
+How many possible unique paths are there?
+Input: m = 3, n = 2
+Output: 3
+Explanation:
+From the top-left corner, there are a total of 3 ways to reach the bottom-right corner:
+1. Right -> Right -> Down
+2. Right -> Down -> Right
+3. Down -> Right -> Right
+
+"""
+class Solution7:
+    def unique_path(self, m, n):
+        self.memo = {}
+        count = self.dfs(0, 0, m - 1, n - 1)
+        return count
+
+    def dfs(self, i, j, m, n):
+        if (i, j) in self.memo: return self.memo[i, j]
+        if m < i or n < j: return 0
+        if i == m and j == n:
+            return 1
+        count = self.dfs(i + 1, j, m, n) + self.dfs(i, j + 1, m, n)
+        self.memo[i, j] = count
+        return count
+
+
+
+"""
+
+Input:
+[
+  [0,0,0],
+  [0,1,0],
+  [0,0,0]
+]
+Output: 2
+Explanation:
+There is one obstacle in the middle of the 3x3 grid above.
+There are two ways to reach the bottom-right corner:
+1. Right -> Right -> Down -> Down
+2. Down -> Down -> Right -> Right
+"""
+class Solution8(object):
+    def uniquePathsWithObstacles(self, obstacleGrid):
+        """
+        :type obstacleGrid: List[List[int]]
+        :rtype: int
+        """
+        self.memo = {}
+        m = len(obstacleGrid)
+        n = len(obstacleGrid[0])
+        count = self.dfs(0,0,m-1,n-1,obstacleGrid)
+        return count
+
+    def dfs(self,i,j,m,n,obstacleGrid):
+        if (i,j) in self.memo:return self.memo[i,j]
+        if i > m or j > n:return 0
+        if obstacleGrid[i][j] == 1: return 0
+        if i==m and j ==n:return 1
+        count = self.dfs(i+1,j,m,n,obstacleGrid) + self.dfs(i,j+1,m,n,obstacleGrid)
+        self.memo[i,j] = count
+        return count
+
+
+"""
+Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
+
+Note: You can only move either down or right at any point in time.
+
+Example:
+
+Input:
+[
+  [1,3,1],
+  [1,5,1],
+  [4,2,1]
+]
+Output: 7
+Explanation: Because the path 1→3→1→1→1 minimizes the sum.
+"""
+class Solution9(object):
+    def minPathSum(self, grid):
+        """
+        :type grid: List[List[int]]
+        :rtype: int
+        """
+        # if len(grid[0]) == 1:return grid[0][0]
+        self.memo = {}
+        m = len(grid)
+        n = len(grid[0])
+        res = self.dfs(0, 0, m - 1, n - 1, grid)
+        return res
+
+    def dfs(self, i, j, m, n, grid):
+        if (i, j) in self.memo: return self.memo[i, j]
+        if i == m and j == n: return grid[i][j]
+        d = r = float('inf')
+        if i < m:
+            d = self.dfs(i + 1, j, m, n, grid)
+        if j < n:
+            r = self.dfs(i, j + 1, m, n, grid)
+        res = min(d, r) + grid[i][j]
+        self.memo[i, j] = res
+        return res
+
+"""
+Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.
+
+For example, given the following triangle
+
+[
+     [2],
+    [3,4],
+   [6,5,7],
+  [4,1,8,3]
+]
+The minimum path sum from top to bottom is 11 (i.e., 2 + 3 + 5 + 1 = 11).
+"""
+
+
+class Solution10(object):
+    def minimumTotal(self, triangle):
+        """
+        :type triangle: List[List[int]]
+        :rtype: int
+        """
+        self.memo = {}
+        m = len(triangle)
+        res = self.dfs(0, 0, m - 1, triangle)
+        return res
+
+    def dfs(self, i, j, m, triangle):
+        if (i, j) in self.memo: return self.memo[i, j]
+        if i == m: return triangle[i][j]
+        l = self.dfs(i + 1, j, m, triangle)
+        r = self.dfs(i + 1, j + 1, m, triangle)
+        res = min(l, r) + triangle[i][j]
+        self.memo[i, j] = res
+        return res
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
