@@ -124,18 +124,24 @@ Output:
 
 """
 
-class Solution5:
-    def subset2(self,nums):
+class Solution5(object):
+    def subsetsWithDup(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
         self.res = []
         nums.sort()
         self.dfs(0,nums,[])
         return self.res
 
     def dfs(self,index,nums,path):
-        if path not in self.res:
-            self.res.append(path)
+        self.res.append(path)
         for i in range(index,len(nums)):
+            if i > index and nums[i] == nums[i-1]:
+                continue
             self.dfs(i+1,nums,path+[nums[i]])
+
 
 
 """
