@@ -11,14 +11,6 @@ Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].
 
 
 
-
-
-
-
-
-
-
-
 class Solution:
     def merge_intervals(self,intervals):
         res = []

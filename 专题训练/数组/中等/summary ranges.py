@@ -15,3 +15,5 @@ class Solution:
                 res.append([])
             res[-1][1:] = num,
         return ['->'.join(map(str,r)) for r in res]
+
+

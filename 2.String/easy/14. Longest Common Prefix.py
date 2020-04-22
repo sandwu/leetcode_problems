@@ -1,4 +1,9 @@
 
+"""
+Input: ["flower","flow","flight"]
+Output: "fl"
+
+"""
 
 class Solution(object):
     """

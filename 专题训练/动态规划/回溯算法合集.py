@@ -20,6 +20,7 @@ class Solution:
         if target < 0: return
         if target == 0:
             self.res.append(path)
+            return
         for i in range(index,len(nums)):
             self.dfs(i,nums,target-nums[i],path+[nums[i]])
 

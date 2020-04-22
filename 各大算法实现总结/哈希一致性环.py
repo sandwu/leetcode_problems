@@ -51,3 +51,22 @@ print("10_hash存放的机器位于：",val1)
 print("20_hash存放的机器位于：",val2)
 
 
+
+
+class Solution:
+    def __init__(self,virtual_nums = 4):
+        self._nodes = {}
+        self.keys = []
+        self.virtual_nums = virtual_nums
+
+    def _hashlib(self,key):
+        hash_num = hashlib.md5(key.encode("utf8")).hexdigest()
+        return int(hash_num,16)
+
+    def _repr_hash_virtual(self,key):
+        return (self._hashlib(key+"i") for i in self.virtual_nums)
+
+    def __getitem__(self, key):
+        for i in self._repr_hash_virtual(key):
+            self._nodes[i] = key
+            bisect.insort(self.keys,i)
