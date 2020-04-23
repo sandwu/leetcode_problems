@@ -64,7 +64,6 @@ class Solution2:
             pre, post = post, res
         return res
 
-
 #最好的时间买进和卖出
 class Solution3:
     def maxProfit(self, prices):
@@ -87,9 +86,28 @@ class Solution4:
             tonow_max = max(now_max,tonow_max)
         return tonow_max
 
+"""
+
+Input: s = 7, nums = [2,3,1,2,4,3]
+Output: 2
+Explanation: the subarray [4,3] has the minimal length under the problem constraint.
 
 
-
+"""
+#求数组满足值的最小子数组
+class Solution5:
+    def minimum(self,s,nums):
+        l = r = 0
+        cnum = 0
+        res = float('inf')
+        while r < len(nums):
+            cnum += nums[r]
+            while cnum >= s:
+                res = min(res,r-l+1)
+                cnum -= nums[l]
+                l += 1
+            r += 1
+        return res if res != float('inf') else 0
 
 
 
