@@ -111,6 +111,82 @@ class Solution5:
 
 
 
+"""
+Input: m = 3, n = 2
+Output: 3
+Explanation:
+From the top-left corner, there are a total of 3 ways to reach the bottom-right corner:
+1. Right -> Right -> Down
+2. Right -> Down -> Right
+3. Down -> Right -> Right
+
+unique path
+
+"""
+
+class Solution6:
+    def unique_path(self, m, n): #到每一个格子都是从左边和上边的加一步，所以只要计算到左边和上边的有多少种即可
+        dp = [[1] * m for _ in range(n)]
+        for i in range(1,n):
+            for j in range(1,m):
+                dp[i][j] = dp[i-1][j] + dp[i][j-1]
+        return dp[-1][-1]
+
+
+"""
+Input:
+[
+  [0,0,0],
+  [0,1,0],
+  [0,0,0]
+]
+Output: 2
+Explanation:
+There is one obstacle in the middle of the 3x3 grid above.
+There are two ways to reach the bottom-right corner:
+1. Right -> Right -> Down -> Down
+2. Down -> Down -> Right -> Right
+
+unique path2
+"""
+class Solution7:
+    """
+    直接按照62的解题思路来做
+    Runtime: 24 ms, faster than 61.86% of Python online submissions for Unique Paths II.
+    Memory Usage: 10.9 MB, less than 22.36% of Python online submissions for Unique Paths II.
+    """
+    def uniquePathsWithObstacles(self, obstacleGrid):
+        """
+        :type obstacleGrid: List[List[int]]
+        :rtype: int
+        """
+        if not obstacleGrid or not obstacleGrid[0]:
+            return 0
+        m = len(obstacleGrid)
+        n = len(obstacleGrid[0])
+        dp = [[0]*n for _ in range(m)]
+        if obstacleGrid[0][0] == 0:
+            dp[0][0] = 1
+        else:
+            return 0
+        for i in range(m):
+            for j in range(n):
+                if obstacleGrid[i][j] == 1:
+                    continue
+                if i > 0:
+                    dp[i][j] += dp[i-1][j]
+                if j > 0:
+                    dp[i][j] += dp[i][j-1]
+        return dp[-1][-1]
+
+
+
+
+
+
+
+
+
 
 
 
